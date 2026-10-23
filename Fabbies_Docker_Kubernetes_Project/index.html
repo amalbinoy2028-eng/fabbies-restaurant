@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fabbies | Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-page">
+  <main class="login-card">
+    <div class="brand-mark">F</div>
+    <p class="eyebrow">FABBIES CATERINGS & MANAGEMENTS</p>
+    <h1>Welcome back</h1>
+    <p class="muted">Sign in to plan your next delicious order.</p>
+    <form id="loginForm">
+      <label for="username">Username</label>
+      <input id="username" name="username" autocomplete="username" required placeholder="Enter username">
+      <label for="password">Password</label>
+      <input id="password" name="password" type="password" autocomplete="current-password" required placeholder="Enter password">
+      <p id="loginError" class="error" role="alert"></p>
+      <button class="btn primary full" type="submit">Login</button>
+    </form>
+    <p class="demo-note">Demo login: <b>fabbies</b> / <b>1234</b></p>
+    <p class="small-note">Academic prototype only. Use server-side authentication before real deployment.</p>
+  </main>
+  <script src="login.js"></script>
+</body>
+</html>

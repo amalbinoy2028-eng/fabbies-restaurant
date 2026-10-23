@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fabbies | Catering Menu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="wordmark" href="micproj.html"><span class="brand-mark small">F</span> FABBIES</a>
+    <div class="top-actions"><span id="welcomeText">Welcome!</span><button id="logoutBtn" class="btn outline small-btn">Logout</button></div>
+  </header>
+  <main class="page-wrap">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">FRESH • TASTY • DELIVERED</p>
+        <h1>Your catering,<br><span>made simple.</span></h1>
+        <p>Choose your favourites, customize your meal, and schedule delivery.</p>
+      </div>
+      <div class="hero-badge">Made with<br><strong>care & flavour</strong></div>
+    </section>
+
+    <div class="layout">
+      <section class="panel menu-panel">
+        <div class="section-heading"><div><p class="eyebrow">EXPLORE OUR MENU</p><h2>Food & Drinks</h2></div></div>
+        <div id="categoryTabs" class="category-tabs"></div>
+        <div id="menuGrid" class="menu-grid"></div>
+        <section class="cart-section">
+          <div class="section-heading"><div><p class="eyebrow">YOUR SELECTION</p><h2>Shopping Cart</h2></div><span id="cartCount" class="pill">0 items</span></div>
+          <div id="cartItems" class="cart-items"><p class="empty-state">Your cart is empty. Choose something delicious!</p></div>
+          <div class="cart-total"><span>Total</span><strong id="cartTotal">₹0.00</strong></div>
+        </section>
+      </section>
+
+      <aside class="panel order-panel">
+        <p class="eyebrow">MAKE IT YOURS</p><h2>Customize & Order</h2>
+        <form id="orderForm">
+          <label for="customization">Food customization</label>
+          <textarea id="customization" rows="3" placeholder="E.g., less spicy, no onions..."></textarea>
+          <label for="customerName">Customer name *</label>
+          <input id="customerName" required maxlength="80" placeholder="Your full name">
+          <label for="contact">Contact number *</label>
+          <input id="contact" required inputmode="tel" pattern="[0-9+() -]{7,20}" placeholder="Phone number">
+          <div class="form-row">
+            <div><label for="deliveryDate">Delivery date *</label><input id="deliveryDate" type="date" required></div>
+            <div><label for="deliveryTime">Delivery time *</label><input id="deliveryTime" type="time" required></div>
+          </div>
+          <label for="location">Delivery location *</label>
+          <textarea id="location" rows="2" required placeholder="House name, street, place"></textarea>
+          <label for="notes">Additional notes</label>
+          <textarea id="notes" rows="2" placeholder="Any other request..."></textarea>
+          <button class="btn primary full" type="submit">Place Order</button>
+          <p class="small-note">This prototype displays an order confirmation in your browser. It does not process payments or save orders to a server database.</p>
+        </form>
+        <div id="orderResult" class="order-result" hidden aria-live="polite"></div>
+      </aside>
+    </div>
+    <footer>© 2026 Fabbies Caterings & Managements · Academic Micro-Project</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
